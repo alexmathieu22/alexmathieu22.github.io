@@ -19,7 +19,7 @@ export default function DarkModeButton() {
             <FontAwesomeIcon
                 icon="fa-solid fa-sun"
                 onClick={() => setTheme("light")}
-                className="hover:cursor-pointer absolute top-[5vh] right-[50%] translate-x-[50%] desktop:translate-x-[0%] desktop:right-[5vh] w-[5vh] h-[5vh]"
+                className="hover:cursor-pointer hover:dark:text-lightMode3 absolute top-[5vh] right-[50%] translate-x-[50%] desktop:translate-x-[0%] desktop:right-[5vh] w-[5vh] h-[5vh]"
             />
         );
     } else {
@@ -27,7 +27,7 @@ export default function DarkModeButton() {
             <FontAwesomeIcon
                 icon="fa-solid fa-moon"
                 onClick={() => setTheme("dark")}
-                className="hover:cursor-pointer absolute top-[5vh] right-[50%] translate-x-[50%] desktop:translate-x-[0%] desktop:right-[5vh] w-[5vh] h-[5vh]"
+                className="hover:cursor-pointer hover:text-white absolute top-[5vh] right-[50%] translate-x-[50%] desktop:translate-x-[0%] desktop:right-[5vh] w-[5vh] h-[5vh]"
             />
         );
     }

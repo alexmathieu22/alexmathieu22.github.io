@@ -1,7 +1,29 @@
+import { useState } from "react";
+
+import JobBoxPopUp from "./JobBoxPopUp";
+
 export default function JobBox({ imagePath, jobTitle, jobDescription }) {
+    const [open, setOpen] = useState(false);
+
+    function jobBoxPopUp() {
+        return (
+            <JobBoxPopUp
+                imagePath={imagePath}
+                jobTitle={jobTitle}
+                jobDescription={jobDescription}
+                setOpen={setOpen}
+                open={open}
+            />
+        );
+    }
+
     return (
         <div className="relative w-[60vw] h-[60vw] tablet:w-[35vh] tablet:h-[35vh] desktop:w-[50vh] desktop:h-[50vh] flex flex-col justify-center items-center gap-[5%]">
-            <div className="hover:cursor-pointer bg-lightMode hover:bg-lightMode2 dark:bg-darkMode dark:hover:bg-darkMode2 w-[70%] h-[70%] flex items-center justify-center rounded-[25%] tablet:rounded-[25%]">
+            {open ? jobBoxPopUp() : null}
+            <div
+                className="hover:cursor-pointer bg-lightMode hover:bg-lightMode2 dark:bg-darkMode dark:hover:bg-darkMode2 w-[70%] h-[70%] flex items-center justify-center rounded-[25%] tablet:rounded-[25%]"
+                onClick={() => setOpen(!open)}
+            >
                 <img
                     src={imagePath}
                     alt="jobLogo"

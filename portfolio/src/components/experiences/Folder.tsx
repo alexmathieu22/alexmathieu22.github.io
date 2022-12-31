@@ -26,7 +26,7 @@ export default function Folder() {
 
     return (
         <div className="relative h-screen min-h-screen w-screen flex justify-center overflow-x-hidden">
-            <h1 className="absolute z-50 top-[4vw] tablet:top-[5vw] laptop:top-[2vw] desktop:top-[1vw] left-[7vw] tablet:left-[3vw] desktop:left-[7vw] font-main text-[11vw] tablet:text-[5vw] desktop:text-[3.5vw] text-white">
+            <h1 className="absolute z-50 top-[4vw] tablet:top-[5vw] laptop:top-[2vw] desktop:top-[1vw] left-[7vw] tablet:left-[3vw] desktop:left-[7vw] font-main text-[11vw] tablet:text-[5vw] desktop:text-[3.5vw] text-darkMode dark:text-white">
                 EXPERIENCES
             </h1>
             {folder}

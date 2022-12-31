@@ -19,10 +19,10 @@ export default function JobBoxPopUp({
             <img
                 src={imagePath}
                 alt="jobLogo"
-                className="absolute top-[30%] w-[80%] max-h-[20%] object-cover"
+                className="absolute top-[30%] max-w-[80%] laptop:max-w-[50%] w-fit max-h-[20%] object-scale-down"
             />
-            <hr className="absolute top-[50%] w-[85%] border-b-[0.8vh] rounded-[1vh] border-darkMode dark:border-white" />
-            <p className="absolute top-[55%] w-[80%] max-h-[40%] overflow-hidden text-justify">
+            <hr className="absolute top-[52%] w-[85%] laptop:w-[50%] border-b-[0.8vh] rounded-[1vh] border-darkMode dark:border-white" />
+            <p className="absolute top-[55%] w-[80%] max-h-[40%] tablet:text-[2.5vh] font-main overflow-auto text-justify">
                 {jobDescription}
             </p>
         </div>

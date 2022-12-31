@@ -35,14 +35,14 @@ export default function Folder() {
                     imagePath={logoUlavalPath}
                     jobTitle={"Research Intern"}
                     jobDescription={
-                        "Voici une grosse description de qualite temporaire en attendant."
+                        "Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant."
                     }
                 />
                 <JobBox
                     imagePath={"/EXFO_logo.png"}
                     jobTitle={"Scripting Intern"}
                     jobDescription={
-                        "Voici une grosse description de qualite temporaire en attendant."
+                        "Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant. Voici une grosse description de qualite temporaire en attendant."
                     }
                 />
             </div>

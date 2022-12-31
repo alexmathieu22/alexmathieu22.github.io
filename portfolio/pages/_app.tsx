@@ -3,9 +3,13 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import {
+    faMoon,
+    faSun,
+    faCircleXmark,
+} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faMoon, faSun);
+library.add(faMoon, faSun, faCircleXmark);
 
 export default function App({ Component, pageProps }: AppProps) {
     return (

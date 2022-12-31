@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function JobBoxPopUp({
     imagePath,
     jobTitle,
@@ -7,10 +9,9 @@ export default function JobBoxPopUp({
 }) {
     return (
         <div className="fixed z-50 left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] bg-lightMode dark:bg-darkMode drop-shadow-[0_5vh_5vw_rgba(0,0,0,1)] w-[90vw] h-[90vh] rounded-[5vh] flex flex-col items-center justify-center gap-[1vh]">
-            <img
-                src="/dark_x.png"
-                alt="x"
-                className="absolute left-[5%] top-[5%] h-[10%] object-cover hover:cursor-pointer"
+            <FontAwesomeIcon
+                icon="fa-solid fa-circle-xmark"
+                className="absolute left-[7%] top-[7%] h-[7%] tablet:left-[10vh] tablet:top-[8vh] tablet:h-[8vh] object-cover hover:cursor-pointer text-darkMode hover:text-lightMode2 dark:text-white hover:dark:text-darkMode3"
                 onClick={() => setOpen(!open)}
             />
             <h1 className="absolute top-[20%] h-[10%] text-[4.5vh] max-w-[80%] font-main">

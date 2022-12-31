@@ -5,11 +5,11 @@ import Contact from "../components/contact/Contact";
 
 export default function Home() {
     return (
-        <div className="bg-lightMode">
+        <div className="bg-lightMode overflow-x-hidden overflow-y-hidden">
             <Presentation />
             <Experiences />
-            <CodeExamples />
-            <Contact />
+            {/* <CodeExamples />
+            <Contact /> */}
         </div>
     );
 }

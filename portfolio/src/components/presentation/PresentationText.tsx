@@ -11,7 +11,7 @@ export default function PresentationText() {
                     className="ml-[2vw] h-[9vh] desktop:h-[13vh]"
                 />
             </div>
-            <h1 className="text-[12vh] desktop:text-[23vh] my-[-3vh] desktop:my-[-9vh] font-londrinasketch outlined">
+            <h1 className="text-[12vh] desktop:text-[23vh] my-[-3vh] desktop:my-[-9vh] font-londrinasketch text-darkMode outlined-dark dark:text-white dark:outlined-light">
                 I'M ALEX
             </h1>
         </div>

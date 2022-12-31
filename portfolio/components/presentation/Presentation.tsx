@@ -2,7 +2,7 @@ import PresentationText from "./PresentationText";
 
 export default function Presentation() {
     return (
-        <div className="w-screen h-screen flex flex-col gap-16 desktop:gap-0 justify-end desktop:flex-row">
+        <div className="select-none w-screen h-screen flex flex-col gap-16 desktop:gap-0 justify-end desktop:flex-row">
             <div className="w-screen desktop:w-[50vw] h-[20vh] desktop:h-screen flex flex-col items-center desktop:items-end justify-center">
                 <PresentationText />
             </div>

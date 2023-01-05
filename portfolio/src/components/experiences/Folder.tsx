@@ -40,7 +40,7 @@ export default function Folder() {
                 EXPERIENCES
             </h1>
             {folder}
-            <div className="pt-[10vh] h-screen w-screen gap-[10vh] desktop:gap-[10vw] flex flex-col desktop:flex-row justify-center desktop:justify-center items-center">
+            <div className="pt-[15vh] h-screen w-screen gap-[10vh] desktop:gap-[10vw] flex flex-col desktop:flex-row justify-center desktop:justify-center items-center">
                 <JobBox
                     imagePath={logoUlavalPath}
                     jobTitle={"Research Intern"}

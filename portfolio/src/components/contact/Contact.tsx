@@ -11,7 +11,7 @@ export default function Contact() {
                     <img
                         src="/raisinghands.svg"
                         alt="raisinghandsemoji"
-                        className="desktop:h-fit pb-[1rem] h-[8vh] laptop:h-[8vh]"
+                        className="latop:h-fit pb-[1vh] h-[8vh]"
                     />
                 </div>
                 <div className="flex flex-col laptop:flex-row h-[80vh] gap-[8vh] justify-center items-center laptop:pb-[25vh]">

@@ -1,10 +1,20 @@
+import { useEffect, useState } from "react";
+
 import { useTheme } from "next-themes";
 
 import JobBox from "./JobBox";
 
 export default function Folder() {
     const { systemTheme, theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => setMounted(true), []);
+
     const currentTheme = theme === "system" ? systemTheme : theme;
+
+    if (!mounted) {
+        return null;
+    }
 
     const folder =
         currentTheme === "dark" ? (

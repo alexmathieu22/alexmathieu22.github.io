@@ -10,8 +10,8 @@ export default function Home() {
             <DarkModeButton />
             <Presentation />
             <Experiences />
-            {/* <CodeExamples />
-            <Contact /> */}
+            {/* <CodeExamples /> */}
+            <Contact />
         </div>
     );
 }

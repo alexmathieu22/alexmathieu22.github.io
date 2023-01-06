@@ -2,7 +2,15 @@ import { useState } from "react";
 
 import JobBoxPopUp from "./JobBoxPopUp";
 
-export default function JobBox({ imagePath, jobTitle, jobDescription }) {
+export default function JobBox({
+    imagePath,
+    jobTitle,
+    jobDescription,
+}: {
+    imagePath: string;
+    jobTitle: string;
+    jobDescription: string;
+}) {
     const [open, setOpen] = useState(false);
 
     function jobBoxPopUp() {

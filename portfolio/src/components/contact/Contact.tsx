@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Contact() {
     return (
-        <div className="h-screen w-screen">
+        <div className="h-screen w-screen bg-lightMode3 dark:bg-darkMode2">
             <div className="flex flex-col w-screen h-screen pt-[10vh]">
                 <div className="w-screen h-[10vh] flex flex-row gap-[5vw] laptop:gap-[3vw] justify-center laptop:justify-start laptop:pl-[10vw] items-center">
                     <h1 className="text-darkMode dark:text-white text-[5vh] laptop:text-[8vh] font-main text-center">

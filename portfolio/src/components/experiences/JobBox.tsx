@@ -1,24 +1,20 @@
-import { useState } from "react";
-
+import experiences, { Experience } from "../../data/experiences";
 import JobBoxPopUp from "./JobBoxPopUp";
 
-export default function JobBox({
-    imagePath,
-    jobTitle,
-    jobDescription,
-}: {
-    imagePath: string;
-    jobTitle: string;
-    jobDescription: string;
-}) {
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+
+export default function JobBox({ experience }: { experience: Experience }) {
+    verifyIfMounted();
+    const currentTheme = getCurrentTheme();
+
     const [open, setOpen] = useState(false);
 
     function jobBoxPopUp() {
         return (
             <JobBoxPopUp
-                imagePath={imagePath}
-                jobTitle={jobTitle}
-                jobDescription={jobDescription}
+                experience={experience}
+                currentTheme={currentTheme}
                 setOpen={setOpen}
                 open={open}
             />
@@ -33,16 +29,38 @@ export default function JobBox({
                 onClick={() => setOpen(!open)}
             >
                 <img
-                    src={imagePath}
+                    src={
+                        currentTheme === "dark"
+                            ? experience.imageDark.src
+                            : experience.image.src
+                    }
                     alt="jobLogo"
                     className="w-[90%] max-h-[90%] object-cover"
                 />
             </div>
             <div className="h-[25%] w-[100%] flex justify-center items-center">
                 <h1 className="select-none font-main text-center h-[100%] w-[45%] text-[2.5vh] tablet:text-[3vh] desktop:text-[4vh]">
-                    {jobTitle}
+                    {experience.title}
                 </h1>
             </div>
         </div>
     );
+}
+
+function verifyIfMounted() {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => setMounted(true), []);
+
+    if (!mounted) {
+        return null;
+    }
+}
+
+function getCurrentTheme() {
+    const { systemTheme, theme, setTheme } = useTheme();
+
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
+    return currentTheme;
 }

@@ -16,6 +16,8 @@ module.exports = {
         extend: {
             fontFamily: {
                 main: ['"Kite One"', "sans-serif"],
+                roboto: ['"Roboto"', "sans-serif"],
+                curlybrace: ['"Kiwi Maru"', "serif"],
                 londrinasketch: ['"Londrina Sketch"', "cursive"],
             },
             colors: {

@@ -1,11 +1,10 @@
-import experiences, { Experience } from "../../data/experiences";
+import { Experience } from "../../data/experiences";
 import JobBoxPopUp from "./JobBoxPopUp";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTheme } from "next-themes";
 
 export default function JobBox({ experience }: { experience: Experience }) {
-    verifyIfMounted();
     const currentTheme = getCurrentTheme();
 
     const [open, setOpen] = useState(false);
@@ -47,20 +46,10 @@ export default function JobBox({ experience }: { experience: Experience }) {
     );
 }
 
-function verifyIfMounted() {
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => setMounted(true), []);
-
-    if (!mounted) {
-        return null;
-    }
-}
-
 function getCurrentTheme() {
     const { systemTheme, theme, setTheme } = useTheme();
 
     const currentTheme = theme === "system" ? systemTheme : theme;
 
-    return currentTheme;
+    return currentTheme === undefined ? "theme" : currentTheme;
 }

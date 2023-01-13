@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
+
+This is a portfolio website built with Next.js/React and Tailwind CSS that showcases my past experiences and some projects I am proud of.
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Design Process
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+First of all, I wanted to make sure that the website was responsive, so I used Tailwind CSS to make sure that the website was responsive on all devices. Based on this idea, I started to design the website with a Mobile First Design.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+![](./assets/design/mobile-first.JPG)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+I like designing websites which also leads to multiple designs.
 
-## Learn More
+![](./assets/design/multiple-designs.JPG)
 
-To learn more about Next.js, take a look at the following resources:
+Also, I knew I wanted a simple websites. When I visit a portfolio website, I know that I do not like having to change pages constantly. Based on this, I built a single page website where everything is on the home page, and if more information is needed, it is shown in a modal. This idea can be seen in the "Experiences" section of the site.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![](./assets/design/modal.JPG)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Challenges I encountered
 
-## Deploy on Vercel
+### Next.js
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Making a light/dark mode for the site ended up being a little more complicated than expected. For the folder in experiences, I decided to use a .png image for the light mode and another for the dark mode (instead of building the folder using css and applying dark mode style to it using tailwind directly). This lead to hydration problems when switching between light and dark mode and then closing and reopening the site. The site was displaying on the client before the theme could be updated server side, which led to an hydration problem. I ended up having to add code to prevent the display of the component before the local storage theme could be read.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Responsive Design
+
+Using an image for the folder like I mentioned before really made this part more complicated. If I were to redo it, I would have used CSS to build the folder, even if that was more difficult at first, I would have saved time later.

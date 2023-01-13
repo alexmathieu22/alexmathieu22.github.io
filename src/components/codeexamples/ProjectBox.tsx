@@ -5,7 +5,6 @@ import { useState } from "react";
 
 export default function ProjectBox({ project }: { project: Project }) {
     const [open, setOpen] = useState(false);
-
     function projectModal() {
         return <ProjectModal project={project} open={open} setOpen={setOpen} />;
     }

@@ -43,10 +43,10 @@ const projects: Project[] = [
         },
         title: "Cafe",
         description:
-            'In the GLO4002 "Qualité et métriques du logiciel" course at Université Laval, in a team of 9, we had to build a REST API for managing a Cafe shop to practice coding good practices. We built it using Java and the REST Assured Java library. This project let us practice the use of SOLID principles, design patterns, TDD approach, the use of the CI/CD pipeline, and the use of GitHub workflows. You can see our whole project on GitHub, I invite you to see the README.md file to learn more about the project, and the Wiki to learn more about the different good practices we used. (Christophe Duchesne, Thomas Mondor, Nathan Paquet, Antony Martel, Jonathan Bessette, Alexandre Aubut, Ines Mrabet and Laurence Campeau)',
+            'In the GLO4002 "Qualité et métriques du logiciel" course at Université Laval, in a team of 9, we had to build a REST API for managing a Cafe shop to practice coding good practices. We built it using Java and the REST Assured Java library. This project let us practice the use of SOLID principles, design patterns, TDD approach, the use of a CI/CD pipeline, and the use of GitHub workflows. You can see our whole project on GitHub, I invite you to see the README.md file to learn more about the project, and the Wiki to learn more about the different good practices we used. (Credits to my teammates: Christophe Duchesne, Thomas Mondor, Nathan Paquet, Antony Martel, Jonathan Bessette, Alexandre Aubut, Ines Mrabet and Laurence Campeau)',
         technos: ["Java", "Rest Assured"],
         hasRepository: true,
-        repositoryLink: "https://github.com/GLO4002UL/projet2022-eq14",
+        repositoryLink: "https://github.com/alexmathieu22/CafeAPI-GLO-4002",
         hasVideo: false,
         videoLink: "",
     },

@@ -10,10 +10,11 @@ A modern, interactive portfolio showcasing my experience as a Platform Engineer 
 - **🎵 Audio Experience**: Realistic mechanical keyboard sounds during typing animations
 - **🎯 Smooth Animations**: Staggered section animations with professional scroll effects
 - **💼 Professional Sections**:
+  - Terminal-style landing page with interactive animations
+  - Terraform plan section showcasing infrastructure work
   - About Me with core competencies
-  - Bell Canada Platform Engineer role showcase
-  - Experience carousel with previous positions
-  - Projects and technical work
+  - Bell Canada Platform Developer role showcase
+  - Experience carousel with career progression
   - Contact information and collaboration opportunities
 
 ## 🚀 Getting Started
@@ -74,12 +75,15 @@ src/
 │   ├── ExperienceSection/     # Career experience carousel
 │   ├── HeaderSection/         # Main portfolio header
 │   ├── LandingPage/           # Terminal-style landing
-│   ├── ProjectsSection/       # Technical projects showcase
 │   ├── Section/               # Reusable section wrapper
-│   └── TerraformPlanSection/  # Infrastructure work
+│   └── TerraformPlanSection/  # Infrastructure work showcase
+├── hooks/
+│   └── useScrollAnimation.ts  # Custom scroll animation hook
+├── theme/
+│   └── theme.ts              # Material-UI theme configuration
 ├── App.tsx                    # Main application component
 ├── main.tsx                   # Application entry point
-└── vite-env.d.ts             # Vite type definitions
+└── index.css                 # Global styles and animations
 ```
 
 ## 🎯 Professional Focus
@@ -94,7 +98,7 @@ This portfolio highlights my expertise in:
 ## 📬 Contact
 
 **Alexandre Mathieu**  
-Platform Engineer at Bell Canada
+Platform Developer at Bell Canada
 
 - 💼 LinkedIn: https://www.linkedin.com/in/alexmathieu22/
 - 🌟 GitHub: https://github.com/alexmathieu22

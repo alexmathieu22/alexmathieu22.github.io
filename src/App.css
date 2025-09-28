@@ -1,0 +1,235 @@
+/* Custom styles for Material-UI components */
+.MuiPaper-root {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease,
+    box-shadow 0.3s ease !important;
+}
+
+.MuiPaper-root:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Theme transition animations */
+.MuiContainer-root,
+.MuiFab-root,
+.MuiTypography-root {
+  transition: color 0.3s ease, background-color 0.3s ease !important;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(-25px);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes arrowBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  75% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.MuiContainer-root {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Floating Action Button custom styling */
+.MuiFab-root {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+  animation: bounceIn 1s ease-out 0.5s both;
+}
+
+.MuiFab-root:hover {
+  transform: scale(1.1) rotate(10deg);
+  transition: transform 0.3s ease-in-out !important;
+}
+
+/* Chip styling */
+.MuiChip-root {
+  transition: transform 0.2s ease-in-out !important;
+}
+
+.MuiChip-root:hover {
+  transform: scale(1.05);
+}
+
+/* Add cute hover effects for icons */
+.MuiSvgIcon-root {
+  transition: transform 0.2s ease-in-out !important;
+}
+
+.MuiBox-root:hover .MuiSvgIcon-root {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Button enhancements */
+.MuiButton-root {
+  transition: all 0.3s ease-in-out !important;
+}
+
+.MuiButton-root:hover {
+  transform: translateY(-2px);
+}
+
+/* Avatar animations */
+.MuiAvatar-root {
+  transition: all 0.3s ease-in-out !important;
+}
+
+/* Paper sections animation delay */
+.MuiPaper-root:nth-of-type(1) {
+  animation: fadeIn 0.6s ease-out 0.1s both;
+}
+
+.MuiPaper-root:nth-of-type(2) {
+  animation: fadeIn 0.6s ease-out 0.2s both;
+}
+
+.MuiPaper-root:nth-of-type(3) {
+  animation: fadeIn 0.6s ease-out 0.3s both;
+}
+
+.MuiPaper-root:nth-of-type(4) {
+  animation: fadeIn 0.6s ease-out 0.4s both;
+}
+
+/* Cute emoji animations */
+.emoji {
+  display: inline-block;
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+/* Sparkle effect */
+.sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+/* Heart animation */
+.heart {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}

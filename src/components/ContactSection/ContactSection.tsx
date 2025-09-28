@@ -1,4 +1,4 @@
-import {Paper, Typography, Box, Button, Chip, Avatar} from "@mui/material";
+import {Paper, Typography, Box, Button, Avatar} from "@mui/material";
 import {Email, LinkedIn, GitHub} from "@mui/icons-material";
 import Section from "../Section/Section";
 

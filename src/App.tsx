@@ -9,7 +9,6 @@ import HeaderSection from "./components/HeaderSection/HeaderSection";
 import AboutSection from "./components/AboutSection/AboutSection";
 import BellSection from "./components/BellSection/BellSection";
 import ExperienceSection from "./components/ExperienceSection/ExperienceSection";
-import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
 import ContactSection from "./components/ContactSection/ContactSection";
 
 // Hooks
@@ -27,7 +26,6 @@ function App() {
   const [aboutRef, aboutVisible] = useScrollAnimation();
   const [bellSectionRef, bellSectionVisible] = useScrollAnimation();
   const [experienceRef, experienceVisible] = useScrollAnimation();
-  const [projectsRef, projectsVisible] = useScrollAnimation();
   const [contactRef, contactVisible] = useScrollAnimation();
 
   const toggleTheme = (): void => {

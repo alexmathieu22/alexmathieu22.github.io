@@ -54,6 +54,32 @@ A modern, interactive portfolio showcasing my experience as a Platform Engineer 
 yarn build
 ```
 
+## 🚀 Deployment
+
+This portfolio is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+### GitHub Pages Setup
+
+1. **Enable GitHub Pages** in your repository settings:
+
+   - Go to Settings → Pages
+   - Set Source to "GitHub Actions"
+
+2. **Automatic Deployment**:
+
+   - Every push to the `main` branch will automatically trigger a deployment
+   - The workflow builds the project and deploys to GitHub Pages
+   - Your portfolio will be available at: `https://alexmathieu22.github.io/`
+
+3. **Manual Deployment**:
+   - Go to Actions tab in your GitHub repository
+   - Click "Deploy to GitHub Pages" workflow
+   - Click "Run workflow" button
+
+### Local Development
+
+For local development, the base URL is automatically handled by Vite.
+
 ## 🛠️ Technologies Used
 
 - **Frontend Framework**: React 18 with TypeScript

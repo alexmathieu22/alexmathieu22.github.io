@@ -1,4 +1,4 @@
-import {Paper, Typography, Box, Button, Avatar} from "@mui/material";
+import {Typography, Box, Button} from "@mui/material";
 import {Email, LinkedIn, GitHub} from "@mui/icons-material";
 import Section from "../Section/Section";
 
@@ -20,40 +20,7 @@ const ContactSection = ({
     delay="0.45s"
     icon={<Email sx={{mr: 1, color: "primary.main", fontSize: 28}} />}
   >
-    <Paper
-      elevation={2}
-      sx={{
-        p: 5,
-        borderRadius: 2,
-        textAlign: "center",
-        background: darkMode ? "#1e1e2e" : "white",
-        border: `1px solid ${darkMode ? "#2d2d3d" : "#e0e0e0"}`,
-      }}
-    >
-      <Avatar
-        sx={{
-          width: 64,
-          height: 64,
-          mx: "auto",
-          mb: 3,
-          backgroundColor: "primary.main",
-          fontSize: "1.5rem",
-        }}
-      >
-        <Email />
-      </Avatar>
-
-      <Typography
-        variant="h4"
-        sx={{
-          fontWeight: 600,
-          mb: 2,
-          color: darkMode ? "white" : "text.primary",
-        }}
-      >
-        Let's Connect
-      </Typography>
-
+    <Box sx={{textAlign: "center"}}>
       <Typography
         variant="body1"
         sx={{
@@ -140,7 +107,7 @@ const ContactSection = ({
           Open to contribute and help on open source / exciting projects! 🚀
         </Typography>
       </Box>
-    </Paper>
+    </Box>
   </Section>
 );
 

@@ -7,7 +7,6 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import TerraformPlanSection from "./components/TerraformPlanSection/TerraformPlanSection";
 import HeaderSection from "./components/HeaderSection/HeaderSection";
 import AboutSection from "./components/AboutSection/AboutSection";
-import BellSection from "./components/BellSection/BellSection";
 import ExperienceSection from "./components/ExperienceSection/ExperienceSection";
 import ContactSection from "./components/ContactSection/ContactSection";
 
@@ -24,7 +23,6 @@ function App() {
   // Scroll animation refs - header starts visible since it's likely in view on load
   const [headerRef, headerVisible] = useScrollAnimation();
   const [aboutRef, aboutVisible] = useScrollAnimation();
-  const [bellSectionRef, bellSectionVisible] = useScrollAnimation();
   const [experienceRef, experienceVisible] = useScrollAnimation();
   const [contactRef, contactVisible] = useScrollAnimation();
 
@@ -111,13 +109,6 @@ function App() {
           <AboutSection
             sectionRef={aboutRef}
             isVisible={aboutVisible}
-            darkMode={darkMode}
-          />
-
-          {/* Bell Platform Engineer Section */}
-          <BellSection
-            sectionRef={bellSectionRef}
-            isVisible={bellSectionVisible}
             darkMode={darkMode}
           />
 

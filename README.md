@@ -96,7 +96,6 @@ For local development, the base URL is automatically handled by Vite.
 src/
 ├── components/
 │   ├── AboutSection/          # Personal introduction and skills
-│   ├── BellSection/           # Bell Canada role details
 │   ├── ContactSection/        # Contact information
 │   ├── ExperienceSection/     # Career experience carousel
 │   ├── HeaderSection/         # Main portfolio header

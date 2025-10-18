@@ -91,11 +91,12 @@ const ExperienceSection = ({sectionRef, isVisible}: ExperienceSectionProps) => {
 
   return (
     <Section
-      title={<>Experience</>}
+      title={<>Experiences</>}
       sectionRef={sectionRef}
       isVisible={isVisible}
       delay="0.25s"
       icon={<Work sx={{mr: 1, color: "primary.main", fontSize: 28}} />}
+      maxWidth="1400px"
     >
       <Box
         sx={{display: "flex", flexDirection: "column", gap: 3, width: "100%"}}
@@ -132,9 +133,9 @@ const ExperienceSection = ({sectionRef, isVisible}: ExperienceSectionProps) => {
             justifyContent: "center",
             gap: 2,
             width: "100%",
-            maxWidth: "900px", // Increased from 800px to accommodate larger main card
+            maxWidth: "800px",
             margin: "0 auto",
-            px: 6, // Add horizontal padding to prevent arrows from overlapping side cards
+            px: 6,
           }}
         >
           {/* Previous Arrow */}
@@ -159,11 +160,11 @@ const ExperienceSection = ({sectionRef, isVisible}: ExperienceSectionProps) => {
           <Box
             sx={{
               display: "flex",
-              alignItems: "center", // This centers all cards vertically
+              alignItems: "center",
               gap: 2,
               position: "relative",
-              minHeight: "400px", // Increased from 320px to accommodate larger cards
-              py: 2, // Add padding to prevent clipping
+              minHeight: "350px", // Reduced to match new card height
+              py: 2,
             }}
           >
             {/* Sliding Cards Container */}
@@ -240,8 +241,8 @@ const ExperienceSection = ({sectionRef, isVisible}: ExperienceSectionProps) => {
                 elevation={6}
                 sx={{
                   flex: 1,
-                  maxWidth: "600px", // Increased from 500px
-                  height: "350px", // Increased from 280px
+                  maxWidth: "500px",
+                  minHeight: "300px",
                   borderRadius: 3,
                   transform: "scale(1)",
                   transition: "all 0.3s ease",
@@ -258,7 +259,7 @@ const ExperienceSection = ({sectionRef, isVisible}: ExperienceSectionProps) => {
               >
                 <CardContent
                   sx={{
-                    p: 4,
+                    p: 3,
                     textAlign: "center",
                     flex: 1,
                     display: "flex",
@@ -269,13 +270,9 @@ const ExperienceSection = ({sectionRef, isVisible}: ExperienceSectionProps) => {
                   <Typography
                     variant="h6"
                     component="h3"
-                    gutterBottom
                     sx={{
                       fontWeight: 600,
-                      mb: 1,
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      whiteSpace: "nowrap",
+                      mb: 0.5,
                     }}
                   >
                     {experiences[activeIndex].emoji}{" "}
@@ -284,13 +281,9 @@ const ExperienceSection = ({sectionRef, isVisible}: ExperienceSectionProps) => {
                   <Typography
                     variant="subtitle1"
                     color="primary.main"
-                    gutterBottom
                     sx={{
                       fontWeight: 500,
-                      mb: 1,
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      whiteSpace: "nowrap",
+                      mb: 0.5,
                     }}
                   >
                     {experiences[activeIndex].company}
@@ -298,29 +291,23 @@ const ExperienceSection = ({sectionRef, isVisible}: ExperienceSectionProps) => {
                   <Typography
                     variant="body2"
                     color="text.secondary"
-                    gutterBottom
                     sx={{
                       fontStyle: "italic",
-                      mb: 2,
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      whiteSpace: "nowrap",
+                      mb: 1.5,
                     }}
                   >
                     {experiences[activeIndex].period}
                   </Typography>
                   <Typography
-                    variant="body1"
+                    variant="body2"
                     color="text.secondary"
                     sx={{
-                      fontSize: "1rem",
-                      lineHeight: 1.4,
-                      textAlign: "justify",
+                      fontSize: "0.9rem",
+                      lineHeight: 1.5,
+                      textAlign: "left",
                       flex: 1,
-                      overflow: "hidden",
-                      display: "-webkit-box",
-                      WebkitLineClamp: 6, // Increased from 4 to 6 lines
-                      WebkitBoxOrient: "vertical",
+                      overflow: "auto",
+                      maxHeight: "200px",
                     }}
                   >
                     {experiences[activeIndex].description}

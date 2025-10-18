@@ -8,6 +8,7 @@ interface SectionProps {
   sectionRef: React.RefObject<HTMLDivElement | null>;
   isVisible: boolean;
   delay?: string;
+  maxWidth?: string;
 }
 
 const Section = ({
@@ -18,12 +19,13 @@ const Section = ({
   sectionRef,
   isVisible,
   delay = "0.1s",
+  maxWidth = "600px",
 }: SectionProps) => (
   <Box
     ref={sectionRef}
     sx={{
       width: "100%",
-      mb: 6,
+      mb: 12,
       opacity: isVisible ? 1 : 0,
       transform: isVisible ? "translateY(0)" : "translateY(30px)",
       transition: "all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
@@ -38,23 +40,17 @@ const Section = ({
         width: "100%",
         mb: 4,
         display: "flex",
-        justifyContent: {xs: "center", md: "flex-start"},
-        pl: {xs: 0, md: "10%"}, // One-sixth of viewport width
+        justifyContent: "center",
       }}
     >
       {/* Title container */}
       <Box
         sx={{
-          textAlign: {xs: "center", md: "left"},
+          textAlign: "center",
           px: 3,
         }}
       >
-        <Box
-          display="flex"
-          alignItems="center"
-          justifyContent={{xs: "center", md: "flex-start"}}
-          mb={2}
-        >
+        <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
           {icon}
           <Typography
             variant="h2"
@@ -76,7 +72,7 @@ const Section = ({
           <Typography
             variant="h6"
             color="text.secondary"
-            sx={{fontStyle: "italic", textAlign: {xs: "center", md: "left"}}}
+            sx={{fontStyle: "italic", textAlign: "center"}}
           >
             {subtitle}
           </Typography>
@@ -87,7 +83,7 @@ const Section = ({
     {/* Content Section - Centered */}
     <Box
       sx={{
-        maxWidth: "600px",
+        maxWidth: maxWidth,
         mx: "auto",
         px: 3,
         width: "100%",

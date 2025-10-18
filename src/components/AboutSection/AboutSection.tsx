@@ -1,4 +1,4 @@
-import {Paper, Typography, Box, Avatar, Chip} from "@mui/material";
+import {Typography, Box, Avatar, Chip} from "@mui/material";
 import {Person, Code} from "@mui/icons-material";
 import Section from "../Section/Section";
 
@@ -16,16 +16,7 @@ const AboutSection = ({sectionRef, isVisible, darkMode}: AboutSectionProps) => (
     delay="0.1s"
     icon={<Person sx={{color: "primary.main", fontSize: 28}} />}
   >
-    <Paper
-      elevation={3}
-      sx={{
-        p: 4,
-        borderRadius: 3,
-        textAlign: "center",
-        background: darkMode ? "#1e1e2e" : "white",
-        border: `1px solid ${darkMode ? "#2d2d3d" : "rgba(0,0,0,0.08)"}`,
-      }}
-    >
+    <Box sx={{textAlign: "center"}}>
       {/* Professional avatar */}
       <Box sx={{mb: 3}}>
         <Avatar
@@ -122,7 +113,7 @@ const AboutSection = ({sectionRef, isVisible, darkMode}: AboutSectionProps) => (
           }}
         />
       </Box>
-    </Paper>
+    </Box>
   </Section>
 );
 
